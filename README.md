@@ -1,0 +1,2 @@
+# Vic3_mod_industry_charcoal_wt
+添加一套跟制造煤炭相关的建筑
