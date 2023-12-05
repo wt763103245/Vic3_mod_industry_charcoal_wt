@@ -1,0 +1,30 @@
+﻿# 木炭窑
+building_wt_charcoal = {
+	# 继承的建筑组
+	building_group = bg_wt_hoi_building_groups
+	texture = "gfx/interface/icons/building_icons/unused/foundries.dds"	#建筑图标
+	# 城市类型，test使用wood
+	city_type = wood
+	# has_max_level = yes
+	levels_per_mesh = 1
+	# 城市化，建筑该建筑提升的城市化度
+	# urbanization = 100
+	# save	@wt 2023年12月5日23:32:59
+	# unlocking_technologies = {
+	# 	# pumpjacks	#泵水机
+	# 	tt_wt_hoi_oil		#石油转化
+	# }
+	# #解锁科技
+	# production_method_groups = {
+	# 	pmg_wt_hoi_produce		#生产方式
+	# 	pmg_wt_hoi_burn
+	# 	pmg_automation_building_motor_industry		# 自动化，使用动力机械厂的
+	# 	pmg_ownership_capital_building_war_machine_industry		#战争工厂的所有权分配
+	# }
+	# #生产方式
+	# # 14500（钢4同名建筑）/15（钢四最大同时建造）/5（基础民工）/7（每周）*15（最大同时建造力）~=415
+	# # 1.5建造力提升，之前是按照建筑部门的建造力计算，现在建筑部分从50->100了，同样这里提升*2
+	# required_construction = 850	#建造花费14500/(15*5)/7*15*2
+	# # ？应该是指ai修建这个建筑的优先级，10000表示和地表相同，3000金矿2000工具/建造部门/铁路
+	# ai_value = 1	#ai倾向度
+}
