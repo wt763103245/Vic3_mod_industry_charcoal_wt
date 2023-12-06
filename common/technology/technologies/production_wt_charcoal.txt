@@ -1,22 +1,22 @@
-# 这个目录下的所有文件，应该是跟游戏内科技相关的。	@wt
-# ？可能要以tt_开头
-# 木炭窑启动科技
-tt_wt_charcoal = {
-	# 科技等级，影响科技研究花费
-	# era_1表示1级科技
-	era = era_1
-	# 显示在科技树中的图标
-	# test暂时修改成煤矿的图标
-	texture = "gfx/interface/icons/building_icons/coal_mine.dds"
-	# ？科技分类。production表示生产科技
-	category = production
-	# 研究完给与的国家修正
-	# modifier = {
-	# 	# state_building_wt_hoi_oil_max_level_add = 3
-	# }
-	# 解锁需要的前置科技
-	unlocking_technologies = {
-		# 需要 制造业 解锁
-		manufacturies
-	}
-}
+# # 这个目录下的所有文件，应该是跟游戏内科技相关的。	@wt
+# # ？可能要以tt_开头
+# # 木炭窑启动科技
+# tt_wt_charcoal = {
+# 	# 科技等级，影响科技研究花费
+# 	# era_1表示1级科技
+# 	era = era_1
+# 	# 显示在科技树中的图标
+# 	# test暂时修改成煤矿的图标
+# 	texture = "gfx/interface/icons/building_icons/coal_mine.dds"
+# 	# ？科技分类。production表示生产科技
+# 	category = production
+# 	# 研究完给与的国家修正
+# 	# modifier = {
+# 	# 	# state_building_wt_hoi_oil_max_level_add = 3
+# 	# }
+# 	# 解锁需要的前置科技
+# 	unlocking_technologies = {
+# 		# 需要 制造业 解锁
+# 		manufacturies
+# 	}
+# }

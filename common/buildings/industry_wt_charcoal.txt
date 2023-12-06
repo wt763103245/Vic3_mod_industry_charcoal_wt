@@ -1,7 +1,7 @@
-﻿# 木炭窑
-building_wt_charcoal = {
+﻿# 木炭窑，开发建筑烧燃料
+building_wt_charcoal_development = {
 	# 继承的建筑组
-	building_group = bg_wt_hoi_building_groups
+	building_group = bg_wt_deurbanization_industry
 	# test暂时使用煤炭的图标
 	texture = "gfx/interface/icons/building_icons/coal_mine.dds"	#建筑图标
 	# 城市类型
@@ -13,24 +13,62 @@ building_wt_charcoal = {
 	# #解锁科技
 	unlocking_technologies = {
 		# pumpjacks	#泵水机
-		# 需要 木炭窑 解锁
-		tt_wt_charcoal
+		# # 需要 木炭窑 解锁
+		# tt_wt_charcoal
+		# 制造业
+		manufacturies
 	}
 	# 生产方式
 	production_method_groups = {
-		# pmg_wt_hoi_produce
-		# pmg_wt_hoi_burn
+		# 烧制生产方式
+		pmg_wt_charcoal_development
 		# 自动化，使用动力机械厂的
-		pmg_automation_building_motor_industry
+		# pmg_automation_building_motor_industry
+		# 蒸汽自动化，煤
+		pmg_steam_automation_building_coal_mine
+		# 运输方式，伐木场
+		pmg_transportation_building_logging_camp
 		# 所有权分配，使用铁路的
 		pmg_ownership_capital_building_railway
 		# 战争工厂的所有权分配
 		# pmg_ownership_capital_building_war_machine_industry		
 	}
-	# #生产方式
-	# # 14500（钢4同名建筑）/15（钢四最大同时建造）/5（基础民工）/7（每周）*15（最大同时建造力）~=415
-	# # 1.5建造力提升，之前是按照建筑部门的建造力计算，现在建筑部分从50->100了，同样这里提升*2
-	# required_construction = 850	#建造花费14500/(15*5)/7*15*2
-	# # ？应该是指ai修建这个建筑的优先级，10000表示和地表相同，3000金矿2000工具/建造部门/铁路
+	# 建造费用
+	# 1.5建造力提升，之前是按照建筑部门的建造力计算，现在建筑部分从50->100了，同样这里提升*2
+	# 200
+	required_construction = construction_cost_medium
+	# 应该是指ai修建这个建筑的优先级，10000表示和地表相同，3000金矿2000工具/建造部门/铁路
 	# ai_value = 1	#ai倾向度
+}
+# 木炭窑，农业建筑
+building_wt_charcoal = {
+	# 继承的建筑组
+	building_group = bg_wt_deurbanization_industry_rural
+	# test暂时使用煤炭的图标
+	texture = "gfx/interface/icons/building_icons/coal_mine.dds"	#建筑图标
+	# 城市类型
+	city_type = wood
+	# test测试是否可以这样设定为农业建筑	@wt
+	# category = rural
+	levels_per_mesh = 1
+	# 城市化，建筑该建筑提升的城市化度
+	# urbanization = 100
+	# 解锁科技
+	unlocking_technologies = {
+		# 圈地
+		enclosure
+	}
+	# 生产方式
+	production_method_groups = {
+		# 烧制生产方式
+		pmg_wt_charcoal
+		# 特殊设备，伐木场
+		pmg_equipment
+		# 运输方式，伐木场
+		pmg_transportation_building_logging_camp
+		# 所有权分配，使用铁路的
+		pmg_ownership_capital_building_railway
+	}
+	# 100
+	required_construction = construction_cost_low
 }

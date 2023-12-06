@@ -1,203 +1,284 @@
 #生产方式
-	# 简单生产方式
-	pm_wt_charcoal_easy = {
-		# 当前生产方式显示在游戏中的贴图
-		# test暂时使用铁镐的标志
-		texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
-		# 建筑建造后默认使用的生产方式
-		is_default = yes
-		# 污染等级
-		state_modifiers = {
-			workforce_scaled = {
-				state_pollution_generation_add = 5
+	# 煤炭窑，开发建筑，需要木头
+		# 堆积热解法
+		pm_wt_heapRetortProcess = {
+			# 当前生产方式显示在游戏中的贴图
+			# test暂时使用铁镐的标志
+			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# 建筑建造后默认使用的生产方式
+			is_default = yes
+			# 污染等级
+			state_modifiers = {
+				workforce_scaled = {
+					state_pollution_generation_add = -1
+				}
+			}
+			# 解锁科技
+			# unlocking_technologies = {
+			# 	# pumpjacks	#泵水机
+			# }	#解锁条件
+			building_modifiers = {
+				# 产出
+				workforce_scaled = {
+					# 需求
+					#工具需求损耗，需要更多贵重的设备，用更多的工具代替
+					goods_input_tools_add = 0.5
+					# 肥料
+					goods_input_fertilizer_add = 0.5
+					# 木头
+					# goods_input_wood_add = 7.5
+					# 生产
+					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
+					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
+					# 煤
+					goods_output_coal_add = 10
+				}
+				# 需求
+				level_scaled = {
+					# 劳工
+					building_employment_laborers_add = 4000
+					# 职员
+					building_employment_clerks_add = 250
+					# 技工
+					building_employment_machinists_add = 50
+					# 工程师
+					building_employment_engineers_add = 50
+					# 学者
+					building_employment_academics_add = 50
+				}
+				# # ？可能是不受到规模影响的效果
+				# unscaled = {						# these modifiers are not scaled
+				# 	# modifier definition
+				# }
 			}
 		}
-		# 解锁科技
-		# unlocking_technologies = {
-		# 	# pumpjacks	#泵水机
-		# }	#解锁条件
-		building_modifiers = {
-			# 产出
-			workforce_scaled = {
-				# modifier definition
-				# input goods
-				goods_input_tools_add = 1	#工具需求损耗，需要更多贵重的设备，用更多的工具代替
-				# output goods
-				# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
-				# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
-				# 15煤产出。木材基础生产方式的一半30/2
-				goods_output_coal_add = 15
+		# 简单生产方式
+		pm_wt_charcoal_development_easy = {
+			# 当前生产方式显示在游戏中的贴图
+			# test暂时使用铁镐的标志
+			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# 建筑建造后默认使用的生产方式
+			is_default = yes
+			# 污染等级
+			state_modifiers = {
+				workforce_scaled = {
+					state_pollution_generation_add = 5
+				}
 			}
-			# 需求
-			level_scaled = {					# these modifiers are scaled by the level of the building
-				# modifier definition
-				# 修改工厂人数到5k符合游戏其他建筑的人口比例
-				building_employment_laborers_add = 2500	#劳工
-				building_employment_clerks_add = 750	#职员
-				building_employment_machinists_add = 1000	#技工
-				building_employment_engineers_add = 500	#工程师
-				building_employment_academics_add = 250	#学者
+			# 解锁科技，解锁条件
+			unlocking_technologies = {
+				# pumpjacks	#泵水机
+				# 炼钢
+				steelworking
 			}
-			# # ？可能是不受到规模影响的效果
-			# unscaled = {						# these modifiers are not scaled
-			# 	# modifier definition
-			# }
-		}
-	}
-	# #燃料乙醇
-	# pm_wt_hoi_oil_liquor = {
-	# 	texture = "gfx/interface/icons/goods_icons/liquor.dds"
-	# 	unlocking_technologies = {
-	# 		combustion_engine	#电气化铁路
-	# 	}
-	# 	building_modifiers = {
-	# 		workforce_scaled = {
-	# 			# input goods
-	# 			goods_input_tools_add = 1 #工具需求
-	# 			goods_input_liquor_add = 40 #烈酒需求，用10%的燃料乙醇代替纯石油
-	# 			# output goods
-	# 			goods_output_oil_add = 40 #石油产出，代替的乙醇等同于石油
-	# 			# goods_output_services_add = 16	#服务产出
-	# 			goods_output_glass_add = 4	#玻璃产出40/10，回收玻璃瓶
-	# 		}
-	# 		level_scaled = {
-	# 			building_employment_laborers_add = 2000	#劳工
-	# 			building_employment_clerks_add = 500	#职员
-	# 			building_employment_machinists_add = 1250	#技工
-	# 			building_employment_engineers_add = 750	#工程师
-	# 			building_employment_academics_add = 500	#学者
-	# 		}
-	# 	}
-	# }
-	# #煤液化
-	# pm_wt_hoi_oil_coal = {
-	# 	texture = "gfx/interface/icons/goods_icons/coal.dds"
-	# 	state_modifiers = {
-	# 		workforce_scaled = {
-	# 			state_pollution_generation_add = 5
-	# 		}
-	# 	}
-	# 	unlocking_technologies = {
-	# 		mobile_armor	#战争工厂
-	# 	}
-	# 	building_modifiers = {
-	# 		workforce_scaled = {
-	# 			# input goods
-	# 			goods_input_tools_add = 1 #工具需求
-	# 			goods_input_coal_add = 130 #煤炭需求
-	# 			# output goods
-	# 			goods_output_oil_add = 50 #石油产出，50*100*1.9/180
-	# 			goods_output_rubber_add = 50	#橡胶产出，与石油1比1
-	# 			goods_output_services_add = 20	#服务产出
-	# 		}
-	# 		level_scaled = {
-	# 			building_employment_laborers_add = 1500	#劳工
-	# 			building_employment_clerks_add = 250	#职员
-	# 			building_employment_machinists_add = 1500	#技工
-	# 			building_employment_engineers_add = 1000	#工程师
-	# 			building_employment_academics_add = 750	#学者
-	# 		}
-	# 	}
-	# }
-
-#燃烧方式
-	pm_wt_hoi_oil_no = {
-		texture = "gfx/interface/icons/generic_icons/toggle.dds"
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_liquor	#燃料乙醇
-			pm_wt_hoi_oil_coal	#煤液化
-		}	#解锁需要的生产方式
-	}	#无需燃料
-	pm_wt_hoi_oil_wood = {
-		texture = "gfx/interface/icons/goods_icons/wood.dds"
-		state_modifiers = {
-			workforce_scaled = {
-				state_pollution_generation_add = 5
+			building_modifiers = {
+				# 产出
+				workforce_scaled = {
+					# 需求
+					#工具需求损耗，需要更多贵重的设备，用更多的工具代替
+					goods_input_tools_add = 1
+					# 消耗木头
+					goods_input_wood_add = 20
+					# 生产
+					# 30煤产出。木材基础生产方式的一半60/2
+					goods_output_coal_add = 30
+				}
+				# 需求
+				level_scaled = {
+					# 劳工
+					building_employment_laborers_add = 4000
+					# 职员
+					building_employment_clerks_add = 150
+					# 技工
+					building_employment_machinists_add = 150
+					# 工程师
+					building_employment_engineers_add = 100
+					# 学者
+					building_employment_academics_add = 100
+				}
 			}
 		}
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_refine	#精炼
-		}	#解锁需要的生产方式
-		building_modifiers = {
-			workforce_scaled = {
-				# input goods
-				goods_input_wood_add = 60 #木头需求
+		# 高级生产
+		pm_wt_charcoal_development_electric = {
+			# 当前生产方式显示在游戏中的贴图
+			# test暂时使用电锯的标志
+			texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
+			# 污染等级
+			state_modifiers = {
+				workforce_scaled = {
+					state_pollution_generation_add = 10
+				}
+			}
+			# 解锁科技，解锁条件
+			unlocking_technologies = {
+				# 发电
+				electrical_generation
+			}
+			building_modifiers = {
+				# 产出
+				workforce_scaled = {
+					# 需求
+					# 工具
+					goods_input_tools_add = 2
+					# 木头
+					goods_input_wood_add = 30
+					# 硫磺
+					goods_input_sulfur_add = 1
+					# 电力
+					goods_input_electricity_add = 1
+					# 生产
+					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
+					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
+					# 50煤产出。木材生产方式的一半100/2
+					goods_output_coal_add = 55
+				}
+				# 需求
+				level_scaled = {
+					# 修改工厂人数到4.5k符合游戏其他建筑的人口比例
+					# 劳工
+					building_employment_laborers_add = 3850
+					# 职员
+					building_employment_clerks_add = 50
+					# 技工
+					building_employment_machinists_add = 250
+					# 工程师
+					building_employment_engineers_add = 150
+					# 学者
+					building_employment_academics_add = 200
+				}
 			}
 		}
-	}	#木头
-	pm_wt_hoi_oil_clothes = {
-		texture = "gfx/interface/icons/goods_icons/fabric.dds"
-		state_modifiers = {
-			workforce_scaled = {
-				state_pollution_generation_add = 5
+	# 煤炭窑，农业建筑，不需要木头，占用耕地
+		# 生产方式 砍树生产煤炭
+		pm_wt_charcoal_easy = {
+			# 当前生产方式显示在游戏中的贴图
+			# test暂时使用铁镐的标志
+			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# 建筑建造后默认使用的生产方式
+			is_default = yes
+			# 污染等级
+			state_modifiers = {
+				workforce_scaled = {
+					state_pollution_generation_add = 5
+				}
+			}
+			building_modifiers = {
+				# 产出
+				workforce_scaled = {
+					goods_input_tools_add = 1	#工具需求损耗，需要更多贵重的设备，用更多的工具代替
+					# 消耗一半的木头
+					# goods_input_wood_add = 7.5
+					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
+					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
+					# 15煤产出。木材基础生产方式的一半30/2
+					goods_output_coal_add = 15
+				}
+				# 需求
+				level_scaled = {
+					# 劳工
+					building_employment_laborers_add = 4100
+					# 职员
+					building_employment_clerks_add = 250
+					# 技工
+					building_employment_machinists_add = 50
+					# # 工程师
+					# building_employment_engineers_add = 50
+					# # 学者
+					# building_employment_academics_add = 50
+				}
 			}
 		}
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_refine	#精炼
-		}	#解锁需要的生产方式
-		building_modifiers = {
-			workforce_scaled = {
-				# input goods
-				goods_input_fabric_add = 60 #布需求
+		# 工具生产
+		pm_wt_charcoal_tools = {
+			# 当前生产方式显示在游戏中的贴图
+			# test暂时使用铁镐的标志
+			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# 建筑建造后默认使用的生产方式
+			is_default = yes
+			# 污染等级
+			state_modifiers = {
+				workforce_scaled = {
+					state_pollution_generation_add = 10
+				}
+			}
+			# 解锁科技，解锁条件
+			unlocking_technologies = {
+				# 炼钢
+				steelworking
+			}
+			building_modifiers = {
+				# 产出
+				workforce_scaled = {
+					goods_input_tools_add = 5	#工具需求损耗，需要更多贵重的设备，用更多的工具代替
+					# 消耗一半的木头
+					# goods_input_wood_add = 7.5
+					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
+					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
+					# 30煤产出。木材基础生产方式的一半60/2
+					goods_output_coal_add = 30
+				}
+				# 需求
+				level_scaled = {
+					# 劳工
+					building_employment_laborers_add = 4000
+					# 职员
+					building_employment_clerks_add = 150
+					# 技工
+					building_employment_machinists_add = 150
+					# 工程师
+					building_employment_engineers_add = 100
+					# 学者
+					building_employment_academics_add = 100
+				}
 			}
 		}
-	}	#布
-	pm_wt_hoi_coal_coal = {
-		texture = "gfx/interface/icons/goods_icons/coal.dds"
-		state_modifiers = {
-			workforce_scaled = {
-				state_pollution_generation_add = 5
+		# 通电生产方式
+		pm_wt_charcoal_electric = {
+			# test暂时使用电锯的标志
+			texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
+			# 污染等级
+			state_modifiers = {
+				workforce_scaled = {
+					state_pollution_generation_add = 15
+				}
+			}
+			# 解锁科技，解锁条件
+			unlocking_technologies = {
+				# pumpjacks	#泵水机
+				# 发电
+				electrical_generation
+			}
+			building_modifiers = {
+				# 物质供需
+				workforce_scaled = {
+					# 需求
+					# 工具
+					goods_input_tools_add = 10	#工具需求损耗，需要更多贵重的设备，用更多的工具代替
+					# 硫磺
+					goods_input_sulfur_add = 1
+					# 电力
+					goods_input_electricity_add = 5
+					# 生产
+					# # 消耗一半的木头
+					# goods_input_wood_add = 7.5
+					# goods_output_oil_add = 30	#石油产出
+					# goods_output_services_add = 12	#服务
+					# 50煤产出。木材基础生产方式的一半100/2
+					goods_output_coal_add = 55
+				}
+				# 人员需求
+				level_scaled = {
+					# 修改工厂人数到4.5k符合游戏其他建筑的人口比例
+					# 劳工
+					building_employment_laborers_add = 3850
+					# 职员
+					building_employment_clerks_add = 50
+					# 技工
+					building_employment_machinists_add = 250
+					# 工程师
+					building_employment_engineers_add = 150
+					# 学者
+					building_employment_academics_add = 200
+				}
 			}
 		}
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_refine	#精炼
-		}	#解锁需要的生产方式
-		building_modifiers = {
-			workforce_scaled = {
-				# input goods
-				goods_input_coal_add = 40 #煤需求
-			}
-		}
-	}	#煤
-	pm_wt_hoi_oil_electricity = {
-		texture = "gfx/interface/icons/goods_icons/electricity.dds"
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_refine	#精炼
-		}	#解锁需要的生产方式
-		# 解锁科技
-		unlocking_technologies = {
-			electrical_generation	# 发电
-		}	#解锁条件
-		building_modifiers = {
-			workforce_scaled = {
-				# input goods
-				goods_input_electricity_add = 40 #电需求
-			}
-		}
-	}	#电
-	pm_wt_hoi_oil_oil = {
-		texture = "gfx/interface/icons/goods_icons/oil.dds"
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_refine	#精炼
-		}	#解锁需要的生产方式
-		building_modifiers = {
-			workforce_scaled = {
-				goods_output_oil_add = -30	#直接减产量
-				# input goods
-				# goods_input_oil_add = 30 #油需求
-			}
-		}
-	}	#油
-	# 酒精
-	pm_wt_hoi_oil_liquor_burn = {
-		texture = "gfx/interface/icons/goods_icons/liquor.dds"
-		unlocking_production_methods = {
-			pm_wt_hoi_oil_refine	#精炼
-		}	#解锁需要的生产方式
-		building_modifiers = {
-			workforce_scaled = {
-				goods_input_liquor_add = 30 #烈酒需求
-				goods_output_glass_add = 3	#玻璃产出/10
-			}
-		}
-	}

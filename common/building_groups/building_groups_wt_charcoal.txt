@@ -22,5 +22,14 @@ bg_wt_deurbanization_industry = {
 	# 每级城市化率
 	urbanization = -50
 	# 建筑每级所使用的基础设施值
-	infrastructure_usage_per_level = 3
+	infrastructure_usage_per_level = 1
+}
+# 占用耕地的建筑
+bg_wt_deurbanization_industry_rural = {
+	parent_group = bg_wt_deurbanization_industry
+	# 农业
+	category = rural
+	# lens = agriculture
+	# 建筑每级所使用的基础设施值
+	infrastructure_usage_per_level = 1
 }
