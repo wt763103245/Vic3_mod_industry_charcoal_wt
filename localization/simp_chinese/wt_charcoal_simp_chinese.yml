@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
 # 木炭工业
  #building
- building_wt_charcoal_development:0 "木炭工业"
+ building_wt_charcoal_development:0 "木炭工坊"
  building_wt_charcoal_development_desc:0 "$building_wt_charcoal_development$"
  building_wt_charcoal_development:0 "扩建$building_wt_charcoal_development$"
  building_wt_charcoal:0 "木炭窑"
@@ -9,20 +9,22 @@
  building_wt_charcoal:0 "扩建$building_wt_charcoal$"
 
  #bg
- bg_building_wt_charcoal_development:0 "$building_wt_charcoal_development$"
- bg_building_wt_charcoal:0 "$building_wt_charcoal$"
- bg_wt_deurbanization_industry:0 "$building_wt_charcoal_development$"
- bg_wt_deurbanization_industry_rural:0 "$building_wt_charcoal$"
+ bg_wt_hoi_building_groups: "地区建筑"
+#  bg_building_wt_charcoal_development:0 "$building_wt_charcoal_development$"
+#  bg_building_wt_charcoal:0 "$building_wt_charcoal$"
+ bg_wt_deurbanization_industry:0 "制炭工业"
+ bg_wt_deurbanization_industry_rural:0 "伐木制炭工业"
 
  #good
  
  #pm
- pm_wt_heapRetortProcess:0 "堆积热解法"
- pm_wt_charcoal_development_easy:0 "木头制炭"
- pm_wt_charcoal_development_electric:0 "工业制炭"
- pm_wt_charcoal_easy:0 "简单林业"
- pm_wt_charcoal_tools:0 "锯木厂"
- pm_wt_charcoal_electric:0 "电力锯木厂"
+ pm_wt_heapRetortProcess:0 "堆积热解"
+ pm_wt_charcoal_development_easy:0 "木材碳化"
+ pm_wt_charcoal_development_electric:0 "电力硫化"
+# 使用游戏原有的文本描述
+ pm_wt_charcoal_easy:0 "$pm_simple_forestry$"
+ pm_wt_charcoal_tools:0 "$pm_saw_mills$"
+ pm_wt_charcoal_electric:0 "$pm_electric_saw_mills$"
 
  #pmg
  pmg_wt_charcoal_development:0 "生产工艺"

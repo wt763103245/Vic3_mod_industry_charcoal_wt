@@ -3,8 +3,8 @@
 		# 堆积热解法
 		pm_wt_heapRetortProcess = {
 			# 当前生产方式显示在游戏中的贴图
-			# test暂时使用铁镐的标志
-			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# test暂时使用没有生产方式的图标
+			texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 			# 建筑建造后默认使用的生产方式
 			is_default = yes
 			# 污染等级
@@ -55,8 +55,8 @@
 		# 简单生产方式
 		pm_wt_charcoal_development_easy = {
 			# 当前生产方式显示在游戏中的贴图
-			# test暂时使用铁镐的标志
-			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# test暂时使用电弧炼钢法图标
+			texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
 			# 建筑建造后默认使用的生产方式
 			is_default = yes
 			# 污染等级
@@ -101,8 +101,8 @@
 		# 高级生产
 		pm_wt_charcoal_development_electric = {
 			# 当前生产方式显示在游戏中的贴图
-			# test暂时使用电锯的标志
-			texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
+			# test暂时煤炭图标
+			texture = "gfx/interface/icons/goods_icons/coal.dds"
 			# 污染等级
 			state_modifiers = {
 				workforce_scaled = {
@@ -152,8 +152,8 @@
 		# 生产方式 砍树生产煤炭
 		pm_wt_charcoal_easy = {
 			# 当前生产方式显示在游戏中的贴图
-			# test暂时使用铁镐的标志
-			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# test使用伐木营地对应图标
+			texture = "gfx/interface/icons/production_method_icons/simple_forestry.dds"
 			# 建筑建造后默认使用的生产方式
 			is_default = yes
 			# 污染等级
@@ -191,8 +191,8 @@
 		# 工具生产
 		pm_wt_charcoal_tools = {
 			# 当前生产方式显示在游戏中的贴图
-			# test暂时使用铁镐的标志
-			texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+			# test
+			texture = "gfx/interface/icons/production_method_icons/saw_mills.dds"
 			# 建筑建造后默认使用的生产方式
 			is_default = yes
 			# 污染等级

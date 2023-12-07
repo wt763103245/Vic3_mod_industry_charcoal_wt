@@ -48,8 +48,6 @@ building_wt_charcoal = {
 	texture = "gfx/interface/icons/building_icons/coal_mine.dds"	#建筑图标
 	# 城市类型
 	city_type = wood
-	# test测试是否可以这样设定为农业建筑	@wt
-	# category = rural
 	levels_per_mesh = 1
 	# 城市化，建筑该建筑提升的城市化度
 	# urbanization = 100

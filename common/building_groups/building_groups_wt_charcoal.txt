@@ -32,4 +32,8 @@ bg_wt_deurbanization_industry_rural = {
 	# lens = agriculture
 	# 建筑每级所使用的基础设施值
 	infrastructure_usage_per_level = 1
+	# ?如果某块地有这个类型的资源，那么默认会添加的建筑
+	# default_building = 
+	# 设定这个组的建筑会耕地
+	land_usage = rural
 }
