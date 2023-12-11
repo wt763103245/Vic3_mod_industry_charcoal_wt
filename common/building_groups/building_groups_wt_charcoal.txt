@@ -20,7 +20,7 @@ bg_wt_deurbanization_industry = {
 	#该建筑组内的建筑分属什么类型的建筑，此外还有重工业（heavy_industry）、农业（agriculture）等，如写在主建筑里则为一个大类（比如农业就包括了所有的农田）
 	lens = heavy_industry
 	# 每级城市化率
-	urbanization = -50
+	urbanization = 5
 	# 建筑每级所使用的基础设施值
 	infrastructure_usage_per_level = 1
 }
