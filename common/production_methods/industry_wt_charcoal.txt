@@ -80,8 +80,8 @@
 					# 消耗木头
 					goods_input_wood_add = 20
 					# 生产
-					# 30煤产出。木材基础生产方式的一半60/2
-					goods_output_coal_add = 30
+					# 煤产出。木材基础生产方式的60/1.5
+					goods_output_coal_add = 40
 				}
 				# 需求
 				level_scaled = {
@@ -129,8 +129,8 @@
 					# 生产
 					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
 					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
-					# 50煤产出。木材生产方式的一半100/2
-					goods_output_coal_add = 55
+					# 煤产出。木材生产方式的一半100/1.5
+					goods_output_coal_add = 70
 				}
 				# 需求
 				level_scaled = {
@@ -170,8 +170,8 @@
 					# goods_input_wood_add = 7.5
 					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
 					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
-					# 15煤产出。木材基础生产方式的一半30/2
-					goods_output_coal_add = 15
+					# 煤产出。木材基础生产方式的一半30/1.5
+					goods_output_coal_add = 20
 				}
 				# 需求
 				level_scaled = {
@@ -214,8 +214,8 @@
 					# goods_input_wood_add = 7.5
 					# goods_output_oil_add = 30	#石油产出，精炼产生的效率石油
 					# goods_output_services_add = 12	#产出的其他消费品30*0.4，用服务代替
-					# 30煤产出。木材基础生产方式的一半60/2
-					goods_output_coal_add = 30
+					# 煤产出。木材基础生产方式的一半60/1.5
+					goods_output_coal_add = 40
 				}
 				# 需求
 				level_scaled = {
@@ -263,8 +263,8 @@
 					# goods_input_wood_add = 7.5
 					# goods_output_oil_add = 30	#石油产出
 					# goods_output_services_add = 12	#服务
-					# 50煤产出。木材基础生产方式的一半100/2
-					goods_output_coal_add = 55
+					# 煤产出。木材基础生产方式的一半100/1.5
+					goods_output_coal_add = 70
 				}
 				# 人员需求
 				level_scaled = {
